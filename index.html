@@ -1,84 +1,98 @@
-<div class="card">
-    <img src="https://static.vecteezy.com/system/resources/previews/024/252/000/non_2x/black-and-white-spotify-logo-glyph-icon-or-symbol-vector.jpg" alt="birthday" class="birthday">
-    <div class="text">
-      <h1>Congrats !</h1>
-      <p class="muted">Semoga harimu selalu penuh warna seperti lagu-lagu favoritmu.</p>
-      <p class="muted"> Terima kasih sudah membawa semangat dan kebahagiaan bagi kami semua. </p>
-      <p class="muted"> <b>Enjoy your Spotify Premium!<b> </p>
-      <h2>FSA_HDSD_KSAG</h2>
-      <br>
-      <br>
-      <p class="muted">www.spotify.com/redeem</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Gift Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #3a5542 25%, #242320 75%);
+            color: #444;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #e9e8e8;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        .container h1 {
+            font-size: 28px;
+            margin: 15px 0;
+            color: #1db954;
+        }
+        .container p {
+            font-size: 16px;
+            /* margin-bottom: 20px; */
+            line-height: 1;
+            color: #666;
+        }
+        .gift-card {
+            background-color: #1db954;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .reveal-button {
+            background-color: #1db954;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .reveal-button:hover {
+            background-color: #148c3c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/01/AppleCompetition-FTRHeader_V2-1440x733.png" alt="Spotify Gift Card">
+        <h1>Congratulations! </h1>
+        <p>Semoga harimu selalu penuh warna seperti</p>
+        <p>lagu-lagu favoritmu.</p> 
+        <!-- <p>Terima kasih sudah membawa semangat dan kebahagiaan bagi kami semua.</p> -->
+        <br>
+        <p><b>Enjoy your Spotify Premium!</b></p>
+        <br>
+        <div id="gift-card" class="gift-card">******-******-******</div>
+        <button class="reveal-button" onclick="revealCode()">Reveal Code</button>
     </div>
-    <div class="space"></div>
-  </div>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-body {
-  background: #1db954;
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.card {
-  background: #fdfdfd;
-  border-radius: 4px;
-  height: 85vh;
-  width: 80vw;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-  overflow: hidden;
-}
-
-@media only screen and (min-width: 1000px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 20%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
-@media only screen and (max-height: 640px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
-img.birthday {
-  max-height: 40vh;
-}
-
-.text {
-  padding: 1em;
-}
-
-.muted {
-  opacity: 0.8;
-}
-
-.space {
-  height: 100px;
-}
-  </style>
+    <script>
+        function revealCode() {
+            const code = "SPOT-1234-5678"; // Replace with the actual code
+            document.getElementById('gift-card').textContent = code;
+        }
+    </script>
+</body>
+</html>
